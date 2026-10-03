@@ -34,10 +34,19 @@ M1 Chunking → M5 Enrichment → M2 Hybrid Search → M3 Reranking → LLM Answ
 
 ## Setup (10 phút)
 
+**Linux / macOS / Git Bash:**
 ```bash
-docker compose up -d                    # Qdrant
+docker compose up -d                    # Khởi động Qdrant
 pip install -r requirements.txt
-cp .env.example .env                    # Điền OPENAI_API_KEY
+cp .env.example .env                    # Tạo file .env và điền OPENAI_API_KEY
+python naive_baseline.py                # Khởi tạo baseline (sẽ cập nhật điểm thật sau khi xong M2 & M4)
+```
+
+**Windows (PowerShell):**
+```powershell
+docker compose up -d                    # Khởi động Qdrant
+pip install -r requirements.txt
+Copy-Item .env.example .env             # Tạo file .env và điền OPENAI_API_KEY (CMD: copy .env.example .env)
 python naive_baseline.py                # Khởi tạo baseline (sẽ cập nhật điểm thật sau khi xong M2 & M4)
 ```
 
@@ -234,9 +243,20 @@ Cấu trúc repository cá nhân khi push lên GitHub:
 
 ### Trước khi nộp
 
+**1. Kiểm tra tổng thể bằng script (chạy được trên mọi hệ điều hành Windows / Linux / macOS):**
 ```bash
-pytest tests/ -v                # Tất cả tests pass?
-python main.py                  # Pipeline chạy end-to-end, sinh reports/?
-python check_lab.py             # Script kiểm tra báo sẵn sàng để nộp?
-grep -r "# TODO" src/m*.py     # 0 TODOs remaining?
+python check_lab.py                     # Kiểm tra đầy đủ: files, reports, reflections, TODOs, tests
+```
+
+**2. Các câu lệnh kiểm tra chi tiết:**
+```bash
+pytest tests/ -v                        # Tất cả tests pass?
+python main.py                          # Pipeline chạy end-to-end, sinh reports/ragas_report.json?
+
+# Kiểm tra số lượng TODOs còn lại (mục tiêu: 0):
+# Linux / macOS:
+grep -r "# TODO" src/m*.py | wc -l
+
+# Windows (PowerShell):
+(Select-String -Path src/*.py -Pattern "# TODO").Count
 ```

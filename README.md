@@ -32,19 +32,49 @@ python -c "from sentence_transformers import CrossEncoder; CrossEncoder('BAAI/bg
 
 ## Quick Start
 
+### 1. Clone repository & tạo môi trường ảo
+
+**Linux / macOS / Git Bash:**
 ```bash
-git clone <repo-url> && cd K4-Track3A-Production-RAG
-docker compose up -d                    # Qdrant
-pip install -r requirements.txt
-cp .env.example .env                    # Điền API keys
-python naive_baseline.py                # Khởi tạo baseline (sẽ cập nhật điểm thật khi chạy main.py)
+git clone <repo-url>
+cd K4-Track3A-Production-RAG
+python3 -m venv .venv
+source .venv/bin/activate
 ```
 
-## Chạy toàn bộ
+**Windows (PowerShell):**
+```powershell
+git clone <repo-url>
+cd K4-Track3A-Production-RAG
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+```
+*(Nếu dùng Windows CMD: chạy `.venv\Scripts\activate.bat`)*
+
+### 2. Cài đặt dependencies & Khởi động dịch vụ
+
+**Linux / macOS / Git Bash:**
+```bash
+docker compose up -d                    # Khởi động Qdrant vector database
+pip install -r requirements.txt
+cp .env.example .env                    # Tạo file .env và điền OPENAI_API_KEY
+python naive_baseline.py                # Khởi tạo baseline
+```
+
+**Windows (PowerShell):**
+```powershell
+docker compose up -d                    # Khởi động Qdrant vector database
+pip install -r requirements.txt
+Copy-Item .env.example .env             # Tạo file .env và điền OPENAI_API_KEY
+python naive_baseline.py                # Khởi tạo baseline
+```
+*(Nếu dùng Windows CMD: dùng `copy .env.example .env` thay cho `Copy-Item`)*
+
+## Chạy toàn bộ & Kiểm tra
 
 ```bash
-python main.py                          # Naive + Production + So sánh
-python check_lab.py                     # Kiểm tra trước khi nộp
+python main.py                          # Chạy Naive + Production + In bảng so sánh
+python check_lab.py                     # Script kiểm tra hợp lệ trước khi nộp (chạy được trên mọi OS)
 ```
 
 ## Cấu trúc repo

@@ -75,17 +75,27 @@
 
 ## Auto-grading
 
+**1. Kiểm tra toàn diện trước khi nộp (khuyến nghị cho mọi hệ điều hành Windows / Linux / macOS):**
 ```bash
-# Tests
+python check_lab.py
+```
+
+**2. Các câu lệnh kiểm tra từng phần:**
+```bash
+# Unit Tests
 pytest tests/ -v
 
-# Lint
-ruff check src/ 2>/dev/null || echo "ruff not installed, skip"
+# Lint (tùy chọn)
+ruff check src/
 
-# TODO count (should be 0)
+# Đếm số TODO còn lại (yêu cầu = 0):
+# Linux / macOS:
 grep -r "# TODO" src/m*.py | wc -l
 
-# Pipeline
+# Windows (PowerShell):
+(Select-String -Path src/*.py -Pattern "# TODO").Count
+
+# Chạy Pipeline
 python src/pipeline.py
 ```
 
