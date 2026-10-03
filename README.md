@@ -113,9 +113,9 @@ K4-Track3A-Production-RAG/
 
 ## Quy chuẩn đặt tên Repository & Nộp bài
 
-- **Tên repository bài nộp:**  
+- **Cấu trúc đặt tên repo:**  
   `K4-Track3A-DAY18-<HoVaTen>-<MSSV>-ProductionRAG`  
-  *(hoặc `K4-Track3A-Production-RAG-<HoVaTen>`)*  
-  *(Ví dụ: `K4-Track3A-DAY18-NguyenVanAn-L3A001-ProductionRAG`)*
+  *(Ví dụ: `K4-Track3A-DAY18-NguyenVanAn-AI20K001-ProductionRAG`)*
 - **Hạn chót nộp bài:** **23h59 ngày diễn ra bài lab (GMT+7)** trên cổng VLearn LMS / Codelab.
+- **Chính sách gia hạn:** **Không có chính sách gia hạn**.
 - **Chi tiết yêu cầu:** Xem tại [ASSIGNMENT.md](ASSIGNMENT.md) và [RUBRIC.md](RUBRIC.md).

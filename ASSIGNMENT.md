@@ -195,17 +195,20 @@ Dựa trên những gì học được hôm nay, viết plan cụ thể cho proj
 
 Theo quy ước chung Khóa 4 (Track 3A) cho bài tập cá nhân:
 - **Cấu trúc đặt tên repo:**  
-  `K4-Track3A-DAY18-<HoVaTen>-<MSSV>-ProductionRAG`  
-  *(hoặc `K4-Track3A-Production-RAG-<HoVaTen>` nếu chưa có MSSV)*
-- **Quy tắc:** Viết không dấu, không khoảng trắng, ngăn cách bằng dấu gạch ngang `-`.
-- **Ví dụ:**  
-  `K4-Track3A-DAY18-NguyenVanAn-L3A001-ProductionRAG`
+  `K4-Track3A-DAY18-<HoVaTen>-<MSSV>-ProductionRAG`
+- **Quy tắc:**
+  - Viết tiếng Việt **không dấu**, **không khoảng trắng**.
+  - Ngăn cách giữa các thành phần bằng dấu gạch nối `-`.
+  - `<HoVaTen>` viết dạng PascalCase (ví dụ: `NguyenVanAn`).
+  - `<MSSV>` là mã số học viên (ví dụ: `AI20K001`).
+- **Ví dụ chuẩn:**  
+  `K4-Track3A-DAY18-NguyenVanAn-AI20K001-ProductionRAG`
 
 ## Hạn nộp bài (Deadline)
 
-- **Hạn chót mặc định:** **23h59 ngày diễn ra bài lab (GMT+7)**.
+- **Hạn chót:** **23h59 ngày diễn ra bài lab (GMT+7)**.
 - **Nơi nộp:** Nộp link GitHub repository cá nhân (để chế độ Public) lên cổng VLearn LMS / Codelab.
-- **Gia hạn:** Tối đa không quá 48h nếu có thông báo phê duyệt từ Key Coach.
+- **Chính sách gia hạn:** **Không có chính sách gia hạn**. Hệ thống sẽ đóng cổng nộp bài đúng 23h59.
 
 ---
 

@@ -98,7 +98,7 @@ python src/pipeline.py
 3. Điền kết quả phân tích vào `analysis/failure_analysis.md`.
 4. Viết bài suy ngẫm tại `analysis/reflections/reflection_[HọTên].md` (theo mẫu `reflection_TEMPLATE.md`).
 5. Kiểm tra tính hợp lệ của bài làm: `python check_lab.py`.
-6. Đặt tên repository cá nhân theo đúng quy chuẩn:  
+6. Đặt tên repository cá nhân theo đúng quy chuẩn duy nhất:  
    `K4-Track3A-DAY18-<HoVaTen>-<MSSV>-ProductionRAG`  
-   *(hoặc `K4-Track3A-Production-RAG-<HoVaTen>`)*.
-7. Push toàn bộ lên GitHub (Public) và nộp link repository lên VLearn LMS trước **23h59 ngày diễn ra bài lab**.
+   *(Ví dụ: `K4-Track3A-DAY18-NguyenVanAn-AI20K001-ProductionRAG`)*.
+7. Push toàn bộ lên GitHub (Public) và nộp link repository lên VLearn LMS trước **23h59 ngày diễn ra bài lab** (không áp dụng chính sách gia hạn).
