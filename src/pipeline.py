@@ -3,6 +3,10 @@ from __future__ import annotations
 """Production RAG Pipeline — Ghép toàn bộ M1+M2+M3+M4+M5."""
 
 import os, sys, time
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 

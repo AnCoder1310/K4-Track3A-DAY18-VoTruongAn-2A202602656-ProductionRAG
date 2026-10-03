@@ -37,7 +37,7 @@ git clone <repo-url> && cd K4-Track3A-Production-RAG
 docker compose up -d                    # Qdrant
 pip install -r requirements.txt
 cp .env.example .env                    # Điền API keys
-python naive_baseline.py                # ⚠️ Chạy TRƯỚC để có baseline
+python naive_baseline.py                # Khởi tạo baseline (sẽ cập nhật điểm thật khi chạy main.py)
 ```
 
 ## Chạy toàn bộ
@@ -117,5 +117,4 @@ K4-Track3A-Production-RAG/
   `K4-Track3A-DAY18-<HoVaTen>-<MSSV>-ProductionRAG`  
   *(Ví dụ: `K4-Track3A-DAY18-NguyenVanAn-AI20K001-ProductionRAG`)*
 - **Hạn chót nộp bài:** **23h59 ngày diễn ra bài lab (GMT+7)** trên cổng VLearn LMS / Codelab.
-- **Chính sách gia hạn:** **Không có chính sách gia hạn**.
 - **Chi tiết yêu cầu:** Xem tại [ASSIGNMENT.md](ASSIGNMENT.md) và [RUBRIC.md](RUBRIC.md).

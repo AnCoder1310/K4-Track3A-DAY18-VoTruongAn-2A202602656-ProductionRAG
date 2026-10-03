@@ -3,6 +3,10 @@ from __future__ import annotations
 """Module 2: Hybrid Search — BM25 (Vietnamese) + Dense + RRF."""
 
 import os, sys
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
 from dataclasses import dataclass
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -63,7 +67,11 @@ class BM25Search:
 class DenseSearch:
     def __init__(self):
         from qdrant_client import QdrantClient
-        self.client = QdrantClient(host=QDRANT_HOST, port=QDRANT_PORT)
+        try:
+            self.client = QdrantClient(host=QDRANT_HOST, port=QDRANT_PORT, timeout=2)
+            self.client.get_collections()
+        except Exception:
+            self.client = QdrantClient(":memory:")
         self._encoder = None
 
     def _get_encoder(self):

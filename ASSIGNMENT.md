@@ -38,7 +38,7 @@ M1 Chunking → M5 Enrichment → M2 Hybrid Search → M3 Reranking → LLM Answ
 docker compose up -d                    # Qdrant
 pip install -r requirements.txt
 cp .env.example .env                    # Điền OPENAI_API_KEY
-python naive_baseline.py                # ⚠️ Chạy TRƯỚC — ghi nhớ baseline scores
+python naive_baseline.py                # Khởi tạo baseline (sẽ cập nhật điểm thật sau khi xong M2 & M4)
 ```
 
 ---
@@ -208,7 +208,6 @@ Theo quy ước chung Khóa 4 (Track 3A) cho bài tập cá nhân:
 
 - **Hạn chót:** **23h59 ngày diễn ra bài lab (GMT+7)**.
 - **Nơi nộp:** Nộp link GitHub repository cá nhân (để chế độ Public) lên cổng VLearn LMS / Codelab.
-- **Chính sách gia hạn:** **Không có chính sách gia hạn**. Hệ thống sẽ đóng cổng nộp bài đúng 23h59.
 
 ---
 

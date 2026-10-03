@@ -101,4 +101,4 @@ python src/pipeline.py
 6. Đặt tên repository cá nhân theo đúng quy chuẩn duy nhất:  
    `K4-Track3A-DAY18-<HoVaTen>-<MSSV>-ProductionRAG`  
    *(Ví dụ: `K4-Track3A-DAY18-NguyenVanAn-AI20K001-ProductionRAG`)*.
-7. Push toàn bộ lên GitHub (Public) và nộp link repository lên VLearn LMS trước **23h59 ngày diễn ra bài lab** (không áp dụng chính sách gia hạn).
+7. Push toàn bộ lên GitHub (Public) và nộp link repository lên VLearn LMS trước **23h59 ngày diễn ra bài lab**.

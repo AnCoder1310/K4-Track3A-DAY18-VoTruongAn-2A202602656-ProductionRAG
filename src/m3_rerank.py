@@ -3,6 +3,10 @@ from __future__ import annotations
 """Module 3: Reranking — Cross-encoder top-20 → top-3 + latency benchmark."""
 
 import os, sys, time
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
 from dataclasses import dataclass
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
