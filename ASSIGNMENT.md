@@ -191,12 +191,30 @@ Dựa trên những gì học được hôm nay, viết plan cụ thể cho proj
 
 ---
 
+## Quy chuẩn đặt tên Repository bài nộp
+
+Theo quy ước chung Khóa 4 (Track 3A) cho bài tập cá nhân:
+- **Cấu trúc đặt tên repo:**  
+  `K4-Track3A-DAY18-<HoVaTen>-<MSSV>-ProductionRAG`  
+  *(hoặc `K4-Track3A-Production-RAG-<HoVaTen>` nếu chưa có MSSV)*
+- **Quy tắc:** Viết không dấu, không khoảng trắng, ngăn cách bằng dấu gạch ngang `-`.
+- **Ví dụ:**  
+  `K4-Track3A-DAY18-NguyenVanAn-L3A001-ProductionRAG`
+
+## Hạn nộp bài (Deadline)
+
+- **Hạn chót mặc định:** **23h59 ngày diễn ra bài lab (GMT+7)**.
+- **Nơi nộp:** Nộp link GitHub repository cá nhân (để chế độ Public) lên cổng VLearn LMS / Codelab.
+- **Gia hạn:** Tối đa không quá 48h nếu có thông báo phê duyệt từ Key Coach.
+
+---
+
 ## Deliverable
 
-Push lên GitHub repo:
+Cấu trúc repository cá nhân khi push lên GitHub:
 
 ```
-K4-Track3A-Production-RAG/
+<Tên-Repo-Cá-Nhân>/
 ├── src/                        # ★ 5 modules đã implement
 │   ├── m1_chunking.py
 │   ├── m2_search.py
@@ -216,6 +234,7 @@ K4-Track3A-Production-RAG/
 
 ```bash
 pytest tests/ -v                # Tất cả tests pass?
-python src/pipeline.py          # Pipeline chạy end-to-end?
+python main.py                  # Pipeline chạy end-to-end, sinh reports/?
+python check_lab.py             # Script kiểm tra báo sẵn sàng để nộp?
 grep -r "# TODO" src/m*.py     # 0 TODOs remaining?
 ```

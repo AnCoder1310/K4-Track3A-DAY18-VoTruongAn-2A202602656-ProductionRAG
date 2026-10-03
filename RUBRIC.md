@@ -93,8 +93,12 @@ python src/pipeline.py
 
 ## Quy trình nộp
 
-1. Implement tất cả TODOs
-2. Chạy `python main.py` (hoặc `python src/pipeline.py`) → sinh ra `reports/ragas_report.json`
-3. Điền `analysis/failure_analysis.md`
-4. Viết `analysis/reflections/reflection_[HọTên].md`
-5. Push lên GitHub, nộp link repo
+1. Implement tất cả TODOs (đảm bảo 100% tests pass và 0 TODOs còn lại).
+2. Chạy `python main.py` → sinh báo cáo bắt buộc tại `reports/ragas_report.json`.
+3. Điền kết quả phân tích vào `analysis/failure_analysis.md`.
+4. Viết bài suy ngẫm tại `analysis/reflections/reflection_[HọTên].md` (theo mẫu `reflection_TEMPLATE.md`).
+5. Kiểm tra tính hợp lệ của bài làm: `python check_lab.py`.
+6. Đặt tên repository cá nhân theo đúng quy chuẩn:  
+   `K4-Track3A-DAY18-<HoVaTen>-<MSSV>-ProductionRAG`  
+   *(hoặc `K4-Track3A-Production-RAG-<HoVaTen>`)*.
+7. Push toàn bộ lên GitHub (Public) và nộp link repository lên VLearn LMS trước **23h59 ngày diễn ra bài lab**.

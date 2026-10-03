@@ -110,3 +110,12 @@ K4-Track3A-Production-RAG/
 | 90 phút | Implement M1 → M2 → M3 → M4 → M5 |
 | 20 phút | Chạy pipeline + RAGAS + failure analysis |
 | 30 phút | Reflection: lecture mapping + project plan |
+
+## Quy chuẩn đặt tên Repository & Nộp bài
+
+- **Tên repository bài nộp:**  
+  `K4-Track3A-DAY18-<HoVaTen>-<MSSV>-ProductionRAG`  
+  *(hoặc `K4-Track3A-Production-RAG-<HoVaTen>`)*  
+  *(Ví dụ: `K4-Track3A-DAY18-NguyenVanAn-L3A001-ProductionRAG`)*
+- **Hạn chót nộp bài:** **23h59 ngày diễn ra bài lab (GMT+7)** trên cổng VLearn LMS / Codelab.
+- **Chi tiết yêu cầu:** Xem tại [ASSIGNMENT.md](ASSIGNMENT.md) và [RUBRIC.md](RUBRIC.md).
