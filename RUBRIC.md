@@ -94,7 +94,7 @@ python src/pipeline.py
 ## Quy trình nộp
 
 1. Implement tất cả TODOs
-2. Chạy `python src/pipeline.py` → `ragas_report.json`
+2. Chạy `python main.py` (hoặc `python src/pipeline.py`) → `ragas_report.json`
 3. Điền `analysis/failure_analysis.md`
-4. Viết `analysis/reflection_[HọTên].md`
+4. Viết `analysis/reflections/reflection_[HọTên].md`
 5. Push lên GitHub, nộp link repo

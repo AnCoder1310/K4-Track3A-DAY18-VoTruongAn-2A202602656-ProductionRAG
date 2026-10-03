@@ -149,7 +149,7 @@ Mở `ragas_report.json` → tìm bottom-5 worst questions → điền `analysis
 
 ## Reflection: Lecture → Project (30 phút)
 
-Viết file `analysis/reflection_[HọTên].md` gồm **3 phần**:
+Viết file `analysis/reflections/reflection_[HọTên].md` (hoặc copy từ `analysis/reflections/reflection_TEMPLATE.md`) gồm **3 phần**:
 
 ### Phần 1: Mapping bài giảng (10 phút)
 Map từng concept trong lecture vào code bạn vừa viết:
@@ -206,8 +206,10 @@ lab18-production-rag/
 │   └── pipeline.py
 ├── analysis/
 │   ├── failure_analysis.md     # ★ Bottom-5 analysis
-│   └── reflection_[HọTên].md  # ★ Mapping + Plan
-└── ragas_report.json           # ★ Auto-generated
+│   └── reflections/
+│       └── reflection_[HọTên].md  # ★ Mapping + Plan
+└── reports/                    # ★ Auto-generated (hoặc ragas_report.json ở root)
+    └── ragas_report.json
 ```
 
 ### Trước khi nộp

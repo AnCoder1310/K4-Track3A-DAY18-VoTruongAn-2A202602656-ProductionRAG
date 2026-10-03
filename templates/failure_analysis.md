@@ -1,9 +1,9 @@
-# Failure Analysis — Lab 18
+# Failure Analysis — Lab 18: Production RAG
 
-**Nhóm:** [Tên nhóm]  
-**Thành viên:** [Tên 1 → M1] · [Tên 2 → M2] · [Tên 3 → M3] · [Tên 4 → M4]
+**Họ tên / Nhóm:** [Tên học viên hoặc Tên nhóm]  
+**Khóa:** K4 - Track 3A  
 
-## RAGAS Scores
+---
 
 | Metric | Naive Baseline | Production | Δ |
 |--------|---------------|------------|---|

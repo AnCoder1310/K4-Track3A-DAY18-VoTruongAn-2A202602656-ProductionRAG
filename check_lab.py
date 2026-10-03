@@ -10,6 +10,11 @@ import os
 import sys
 import subprocess
 
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
+
 
 def check_file(path: str, required: bool = True) -> bool:
     if os.path.exists(path):
@@ -54,21 +59,18 @@ def check_todos() -> int:
 def run_tests() -> tuple[int, int]:
     """Run pytest and return (passed, total)."""
     try:
+        import re
         result = subprocess.run(
             [sys.executable, "-m", "pytest", "tests/", "-v", "--tb=no", "-q"],
-            capture_output=True, text=True, timeout=120,
+            capture_output=True, text=True, timeout=120, encoding="utf-8", errors="replace"
         )
         lines = result.stdout.strip().split("\n")
         summary = lines[-1] if lines else ""
-        # Parse "X passed, Y failed" or "X passed"
-        passed = total = 0
-        for part in summary.split(","):
-            part = part.strip()
-            if "passed" in part:
-                passed = int(part.split()[0])
-                total += passed
-            if "failed" in part:
-                total += int(part.split()[0])
+        m_pass = re.search(r"(\d+)\s+passed", summary)
+        m_fail = re.search(r"(\d+)\s+failed", summary)
+        passed = int(m_pass.group(1)) if m_pass else 0
+        failed = int(m_fail.group(1)) if m_fail else 0
+        total = passed + failed
         return passed, total
     except Exception as e:
         print(f"  ⚠️  pytest error: {e}")
@@ -82,35 +84,51 @@ def validate():
     # 1. Source files
     print("📁 Source code:")
     for f in ["src/m1_chunking.py", "src/m2_search.py", "src/m3_rerank.py",
-              "src/m4_eval.py", "src/pipeline.py"]:
+              "src/m4_eval.py", "src/m5_enrichment.py", "src/pipeline.py"]:
         if not check_file(f):
             errors += 1
 
     # 2. Reports
     print("\n📊 Reports:")
-    if check_file("reports/ragas_report.json"):
-        if not check_json("reports/ragas_report.json", ["aggregate", "num_questions"]):
+    report_file = None
+    if os.path.exists("reports/ragas_report.json"):
+        report_file = "reports/ragas_report.json"
+    elif os.path.exists("ragas_report.json"):
+        report_file = "ragas_report.json"
+
+    if report_file and check_file(report_file):
+        if not check_json(report_file, ["aggregate", "num_questions"]):
             errors += 1
     else:
+        print("  ❌ THIẾU: reports/ragas_report.json (hoặc ragas_report.json)")
         errors += 1
-    check_file("reports/naive_baseline_report.json", required=False)
+
+    if os.path.exists("reports/naive_baseline_report.json"):
+        check_file("reports/naive_baseline_report.json", required=False)
+    elif os.path.exists("naive_baseline_report.json"):
+        check_file("naive_baseline_report.json", required=False)
 
     # 3. Analysis
     print("\n📝 Analysis:")
     check_file("analysis/failure_analysis.md")
-    check_file("analysis/group_report.md")
+    check_file("analysis/group_report.md", required=False)
 
     # 4. Individual reflections
     print("\n👤 Individual reflections:")
     reflections = []
     ref_dir = "analysis/reflections"
     if os.path.isdir(ref_dir):
-        reflections = [f for f in os.listdir(ref_dir) if f.startswith("reflection_") and f.endswith(".md")]
+        reflections.extend([f"{ref_dir}/{f}" for f in os.listdir(ref_dir)
+                            if f.startswith("reflection_") and f.endswith(".md") and f != "reflection_TEMPLATE.md"])
+    if os.path.isdir("analysis"):
+        reflections.extend([f"analysis/{f}" for f in os.listdir("analysis")
+                            if f.startswith("reflection_") and f.endswith(".md") and f != "reflection_TEMPLATE.md"])
+
     if reflections:
-        for r in reflections:
-            print(f"  ✅ {ref_dir}/{r}")
+        for r in set(reflections):
+            print(f"  ✅ {r}")
     else:
-        print(f"  ⚠️  Chưa có file reflection cá nhân trong {ref_dir}/")
+        print(f"  ⚠️  Chưa có file reflection cá nhân (đặt tại {ref_dir}/reflection_[HọTên].md hoặc analysis/reflection_[HọTên].md)")
 
     # 5. TODO count
     print("\n🔧 TODO markers:")

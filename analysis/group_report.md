@@ -7,10 +7,11 @@
 
 | Tên | Module | Hoàn thành | Tests pass |
 |-----|--------|-----------|-----------|
-| | M1: Chunking | ☐ | /8 |
+| | M1: Chunking | ☐ | /13 |
 | | M2: Hybrid Search | ☐ | /5 |
 | | M3: Reranking | ☐ | /5 |
 | | M4: Evaluation | ☐ | /4 |
+| | M5: Enrichment | ☐ | /11 |
 
 ## Kết quả RAGAS
 

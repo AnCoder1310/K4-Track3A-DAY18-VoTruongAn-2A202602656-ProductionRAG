@@ -1,8 +1,7 @@
 # Lab 18: Production RAG Pipeline
 
-**AICB-K34 · Ngày 18 · Production RAG**  
-**Giảng viên:** Nguyễn Tiến Đồng · **Thời gian:** 2h implement + 30 phút reflection
-**Ref**: repo của giảng viên Trần Quang Thiện K2. 
+**K4-Track3A · Ngày 18 · Production RAG**  
+**Thời gian:** 2h implement + 30 phút reflection
 
 ---
 
@@ -64,16 +63,16 @@ lab18-production-rag/
 ├── docker-compose.yml          # Qdrant local
 ├── .env.example                # API keys template
 │
-├── data/                       # Corpus tiếng Việt — 40 .md files + PDFs
+├── data/                       # Corpus tiếng Việt — 25 .md files + 3 PDFs (28 files total)
 │   ├── nghi_phep_nam_v2023.md  # Nghỉ phép 12 ngày (v2023, superseded)
 │   ├── nghi_phep_nam_v2024.md  # Nghỉ phép 15 ngày (v2024, hiện hành)
 │   ├── mat_khau_v1.md          # Password policy 90 ngày (OLD)
 │   ├── mat_khau_v2.md          # Password policy 120 ngày + MFA (NEW)
-│   ├── ... (40 files total)    # 8 categories: leave, salary, IT, workflow, training, admin, safety, compliance
+│   ├── ... (28 files total)    # 8 categories: leave, salary, IT, workflow, training, admin, safety, compliance
 │   ├── so_tay_an_toan.pdf      # An toàn PCCC + sơ cứu (PDF text)
 │   ├── BCTC.pdf                # Báo cáo tài chính (scan, cần OCR)
-│   └── Nghi_dinh_13-2023.pdf   # Nghị định BVDL (scan, cần OCR)
-├── test_set.json               # 30 Q&A pairs (6 types: lookup, version, negation, multi-hop, numeric, ambiguous)
+│   └── Nghi_dinh_so_13-2023_ve_bao_ve_du_lieu_ca_nhan_508ee.pdf # Nghị định BVDL (scan, cần OCR)
+├── test_set.json               # 20 Q&A pairs (6 types: lookup, version, negation, multi-hop, numeric, ambiguous)
 │
 ├── src/                        # ★ Scaffold code (có TODO markers)
 │   ├── m1_chunking.py          # Module 1: Chunking
