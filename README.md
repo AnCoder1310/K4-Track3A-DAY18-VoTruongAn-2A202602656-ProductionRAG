@@ -102,11 +102,11 @@ K4-Track3A-Production-RAG/
     └── failure_analysis.md
 ```
 
-## Timeline
+## Timeline (Thời lượng ước tính)
 
-| Thời gian | Hoạt động |
-|-----------|-----------|
-| 0:00–0:10 | Setup + chạy `naive_baseline.py` |
-| 0:10–1:40 | Implement M1 → M2 → M3 → M4 → M5 |
-| 1:40–2:00 | Chạy pipeline + RAGAS + failure analysis |
-| 2:00–2:30 | Reflection: lecture mapping + project plan |
+| Thời lượng | Hoạt động |
+|------------|-----------|
+| 10 phút | Setup môi trường + chạy `naive_baseline.py` |
+| 90 phút | Implement M1 → M2 → M3 → M4 → M5 |
+| 20 phút | Chạy pipeline + RAGAS + failure analysis |
+| 30 phút | Reflection: lecture mapping + project plan |

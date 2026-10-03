@@ -17,18 +17,18 @@ M1 Chunking → M5 Enrichment → M2 Hybrid Search → M3 Reranking → LLM Answ
 
 ---
 
-## Timeline
+## Timeline (Thời lượng ước tính)
 
-| Thời gian | Hoạt động |
-|-----------|-----------|
-| 0:00–0:10 | Setup: `docker compose up -d`, `pip install`, chạy `naive_baseline.py` |
-| 0:10–0:30 | **M1 Chunking** — 3 strategies (semantic, hierarchical, structure-aware) |
-| 0:30–0:50 | **M2 Search** — BM25 Vietnamese + Dense + RRF |
-| 0:50–1:05 | **M3 Rerank** — CrossEncoder load + rerank |
-| 1:05–1:20 | **M4 Eval** — RAGAS + failure analysis |
-| 1:20–1:40 | **M5 Enrichment** — combined single-call hoặc 4 techniques riêng |
-| 1:40–2:00 | Chạy `python src/pipeline.py` → RAGAS scores → failure analysis |
-| 2:00–2:30 | **Reflection:** map lecture concepts → project plan (xem bên dưới) |
+| Thời lượng | Hoạt động |
+|------------|-----------|
+| 10 phút | Setup môi trường: `docker compose up -d`, `pip install`, chạy `naive_baseline.py` |
+| 20 phút | **M1 Chunking** — 3 strategies (semantic, hierarchical, structure-aware) |
+| 20 phút | **M2 Search** — BM25 Vietnamese + Dense + RRF |
+| 15 phút | **M3 Rerank** — CrossEncoder load + rerank |
+| 15 phút | **M4 Eval** — RAGAS + failure analysis |
+| 20 phút | **M5 Enrichment** — combined single-call hoặc 4 techniques riêng |
+| 20 phút | Chạy `python src/pipeline.py` → RAGAS scores → failure analysis |
+| 30 phút | **Reflection:** map lecture concepts → project plan (xem bên dưới) |
 
 ---
 
