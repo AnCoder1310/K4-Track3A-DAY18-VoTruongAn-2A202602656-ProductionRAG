@@ -30,7 +30,7 @@
 | # | Tiêu chí | Điểm | Cách chấm |
 |---|----------|------|-----------|
 | 6 | Pipeline chạy end-to-end | 10 | `python src/pipeline.py` exit code 0 |
-| 7 | RAGAS scores hợp lý | 10 | Check `ragas_report.json` |
+| 7 | RAGAS scores hợp lý | 10 | Check `reports/ragas_report.json` |
 | 8 | Failure analysis có insight | 5 | Review `analysis/failure_analysis.md` |
 
 ### Thang điểm RAGAS (#7)
@@ -66,8 +66,8 @@
 
 | Bonus | Điểm | Kiểm tra |
 |-------|------|----------|
-| RAGAS Faithfulness ≥ 0.85 | +3 | `ragas_report.json` |
-| RAGAS tất cả metrics ≥ 0.75 | +3 | `ragas_report.json` |
+| RAGAS Faithfulness ≥ 0.85 | +3 | `reports/ragas_report.json` |
+| RAGAS tất cả metrics ≥ 0.75 | +3 | `reports/ragas_report.json` |
 | Enrichment combined mode (1 call/chunk) | +2 | Code review: `_enrich_single_call()` |
 | Latency breakdown report | +2 | Có bảng thời gian từng bước |
 
@@ -94,7 +94,7 @@ python src/pipeline.py
 ## Quy trình nộp
 
 1. Implement tất cả TODOs
-2. Chạy `python main.py` (hoặc `python src/pipeline.py`) → `ragas_report.json`
+2. Chạy `python main.py` (hoặc `python src/pipeline.py`) → sinh ra `reports/ragas_report.json`
 3. Điền `analysis/failure_analysis.md`
 4. Viết `analysis/reflections/reflection_[HọTên].md`
 5. Push lên GitHub, nộp link repo

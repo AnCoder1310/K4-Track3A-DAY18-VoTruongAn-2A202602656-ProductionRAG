@@ -1,6 +1,6 @@
 # Failure Analysis — Lab 18: Production RAG
 
-**Họ tên / Nhóm:** [Tên học viên hoặc Tên nhóm]  
+**Họ và tên học viên:** [Họ và tên]  
 **Khóa:** K4 - Track 3A  
 
 ---

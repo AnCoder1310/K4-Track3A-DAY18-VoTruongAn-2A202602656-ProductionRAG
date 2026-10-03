@@ -39,10 +39,10 @@ def main():
     search, reranker = build_pipeline()
     prod_results = evaluate_pipeline(search, reranker)
 
-    # Move reports to reports/
+    # Ensure reports are located in reports/
     for f in ["ragas_report.json", "naive_baseline_report.json"]:
         if os.path.exists(f):
-            os.rename(f, f"reports/{f}")
+            os.replace(f, f"reports/{f}")
 
     # Step 3: Comparison
     print("\n📌 STEP 3: Comparison")
@@ -69,9 +69,8 @@ def main():
     print(f"\n⏱️  Total time: {elapsed:.1f}s")
     print("\n📋 Next steps:")
     print("  1. Điền analysis/failure_analysis.md")
-    print("  2. Điền analysis/group_report.md")
-    print("  3. Viết analysis/reflections/reflection_[Tên].md")
-    print("  4. Chạy: python check_lab.py")
+    print("  2. Viết analysis/reflections/reflection_[HọTên].md")
+    print("  3. Chạy: python check_lab.py")
 
 
 if __name__ == "__main__":

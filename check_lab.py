@@ -90,28 +90,16 @@ def validate():
 
     # 2. Reports
     print("\n📊 Reports:")
-    report_file = None
-    if os.path.exists("reports/ragas_report.json"):
-        report_file = "reports/ragas_report.json"
-    elif os.path.exists("ragas_report.json"):
-        report_file = "ragas_report.json"
-
-    if report_file and check_file(report_file):
-        if not check_json(report_file, ["aggregate", "num_questions"]):
+    if check_file("reports/ragas_report.json"):
+        if not check_json("reports/ragas_report.json", ["aggregate", "num_questions"]):
             errors += 1
     else:
-        print("  ❌ THIẾU: reports/ragas_report.json (hoặc ragas_report.json)")
         errors += 1
-
-    if os.path.exists("reports/naive_baseline_report.json"):
-        check_file("reports/naive_baseline_report.json", required=False)
-    elif os.path.exists("naive_baseline_report.json"):
-        check_file("naive_baseline_report.json", required=False)
+    check_file("reports/naive_baseline_report.json", required=False)
 
     # 3. Analysis
     print("\n📝 Analysis:")
     check_file("analysis/failure_analysis.md")
-    check_file("analysis/group_report.md", required=False)
 
     # 4. Individual reflections
     print("\n👤 Individual reflections:")

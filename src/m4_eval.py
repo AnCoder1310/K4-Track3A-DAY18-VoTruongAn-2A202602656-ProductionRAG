@@ -76,8 +76,11 @@ def failure_analysis(eval_results: list[EvalResult], bottom_n: int = 10) -> list
     return []
 
 
-def save_report(results: dict, failures: list[dict], path: str = "ragas_report.json"):
+def save_report(results: dict, failures: list[dict], path: str = "reports/ragas_report.json"):
     """Save evaluation report to JSON. (Đã implement sẵn)"""
+    parent_dir = os.path.dirname(path)
+    if parent_dir:
+        os.makedirs(parent_dir, exist_ok=True)
     report = {
         "aggregate": {k: v for k, v in results.items() if k != "per_question"},
         "num_questions": len(results.get("per_question", [])),

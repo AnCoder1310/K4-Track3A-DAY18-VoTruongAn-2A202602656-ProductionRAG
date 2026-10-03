@@ -80,7 +80,7 @@ lab18-production-rag/
 │   ├── m3_rerank.py            # Module 3: Reranking
 │   ├── m4_eval.py              # Module 4: Evaluation
 │   ├── m5_enrichment.py        # Module 5: Enrichment Pipeline
-│   └── pipeline.py             # Ghép nhóm
+│   └── pipeline.py             # Ghép toàn bộ pipeline
 │
 ├── tests/                      # Auto-grading
 │   ├── test_m1.py
@@ -90,18 +90,16 @@ lab18-production-rag/
 │   └── test_m5.py
 │
 ├── analysis/                   # ★ Deliverable
-│   ├── failure_analysis.md     # Phân tích failures (nhóm)
-│   ├── group_report.md         # Báo cáo nhóm
+│   ├── failure_analysis.md     # Phân tích failures (cá nhân)
 │   └── reflections/            # Reflection cá nhân
 │       └── reflection_TEMPLATE.md
 │
-├── reports/                    # ★ Auto-generated (sau khi chạy main.py)
+├── reports/                    # ★ Auto-generated (bắt buộc: reports/ragas_report.json)
 │   ├── ragas_report.json
 │   └── naive_baseline_report.json
 │
 └── templates/                  # Templates gốc (backup)
-    ├── failure_analysis.md
-    └── group_report.md
+    └── failure_analysis.md
 ```
 
 ## Timeline

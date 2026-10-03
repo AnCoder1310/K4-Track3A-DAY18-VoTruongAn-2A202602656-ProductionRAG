@@ -143,7 +143,7 @@ python src/pipeline.py
 | Context Precision | ? | ? | ? |
 | Context Recall | ? | ? | ? |
 
-Mở `ragas_report.json` → tìm bottom-5 worst questions → điền `analysis/failure_analysis.md`.
+Mở `reports/ragas_report.json` → tìm bottom-5 worst questions → điền `analysis/failure_analysis.md`.
 
 ---
 
@@ -208,7 +208,7 @@ lab18-production-rag/
 │   ├── failure_analysis.md     # ★ Bottom-5 analysis
 │   └── reflections/
 │       └── reflection_[HọTên].md  # ★ Mapping + Plan
-└── reports/                    # ★ Auto-generated (hoặc ragas_report.json ở root)
+└── reports/                    # ★ Bắt buộc: kết quả đánh giá pipeline
     └── ragas_report.json
 ```
 
