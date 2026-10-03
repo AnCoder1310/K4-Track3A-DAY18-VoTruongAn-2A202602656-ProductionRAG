@@ -33,7 +33,7 @@ python -c "from sentence_transformers import CrossEncoder; CrossEncoder('BAAI/bg
 ## Quick Start
 
 ```bash
-git clone <repo-url> && cd lab18-production-rag
+git clone <repo-url> && cd K4-Track3A-Production-RAG
 docker compose up -d                    # Qdrant
 pip install -r requirements.txt
 cp .env.example .env                    # Điền API keys
@@ -50,7 +50,7 @@ python check_lab.py                     # Kiểm tra trước khi nộp
 ## Cấu trúc repo
 
 ```
-lab18-production-rag/
+K4-Track3A-Production-RAG/
 ├── README.md                   # File này
 ├── ASSIGNMENT.md               # ★ Đề bài + timeline + reflection
 ├── RUBRIC.md                   # Hệ thống chấm điểm

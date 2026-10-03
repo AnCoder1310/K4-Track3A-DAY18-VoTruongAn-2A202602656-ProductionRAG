@@ -196,7 +196,7 @@ Dựa trên những gì học được hôm nay, viết plan cụ thể cho proj
 Push lên GitHub repo:
 
 ```
-lab18-production-rag/
+K4-Track3A-Production-RAG/
 ├── src/                        # ★ 5 modules đã implement
 │   ├── m1_chunking.py
 │   ├── m2_search.py
