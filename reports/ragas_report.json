@@ -1,0 +1,111 @@
+{
+  "aggregate": {
+    "faithfulness": 0.0,
+    "answer_relevancy": 0.0,
+    "context_precision": 0.0,
+    "context_recall": 0.0
+  },
+  "num_questions": 20,
+  "failures": [
+    {
+      "question": "Nhân viên được nghỉ bao nhiêu ngày khi kết hôn?",
+      "answer": "Trích từ nghi_phep_dac_biet.md. \n\n## Các trường hợp được nghỉ phép đặc biệt Nhân viên được nghỉ có lương trong các trường hợp sau đây mà không trừ vào phép năm: - **Kết hôn**: 3 ngày làm việc - **Tang lễ** (cha mẹ, vợ/chồng, con): 3 ngày làm việc",
+      "ground_truth": "Nhân viên được nghỉ 3 ngày làm việc có lương khi kết hôn, không trừ vào phép năm.",
+      "avg_score": 0.0,
+      "worst_metric": "faithfulness",
+      "score": 0.0,
+      "diagnosis": "LLM tự bịa câu trả lời ngoài tài liệu (LLM hallucinating)",
+      "suggested_fix": "Thắt chặt system prompt, giảm nhiệt độ (temperature) về 0 (Tighten prompt, lower temperature)"
+    },
+    {
+      "question": "Bảo hiểm sức khỏe PVI có hạn mức bao nhiêu cho nhân viên?",
+      "answer": "Trích từ bao_hiem_suc_khoe.md. \n\n## Bảo hiểm cho nhân viên\nCông ty cung cấp gói bảo hiểm sức khỏe toàn diện qua **PVI Insurance** cho tất cả nhân viên chính thức. Hạn mức bảo hiểm: **200.000.000 VNĐ/năm** bao gồm nội trú, ngoại trú và nha khoa.",
+      "ground_truth": "Hạn mức bảo hiểm sức khỏe PVI cho nhân viên là 200.000.000 VNĐ/năm, bao gồm nội trú, ngoại trú và nha khoa.",
+      "avg_score": 0.0,
+      "worst_metric": "faithfulness",
+      "score": 0.0,
+      "diagnosis": "LLM tự bịa câu trả lời ngoài tài liệu (LLM hallucinating)",
+      "suggested_fix": "Thắt chặt system prompt, giảm nhiệt độ (temperature) về 0 (Tighten prompt, lower temperature)"
+    },
+    {
+      "question": "Phụ cấp ăn trưa hàng tháng là bao nhiêu?",
+      "answer": "Trích từ phu_cap.md. \n\n## Phụ cấp ăn trưa\nTất cả nhân viên được hưởng phụ cấp ăn trưa **1.000.000 VNĐ/tháng**, chi trả cùng kỳ lương. Phụ cấp này không áp dụng cho những ngày nghỉ phép, nghỉ ốm hoặc công tác ngoài.",
+      "ground_truth": "Phụ cấp ăn trưa là 1.000.000 VNĐ/tháng, chi trả cùng kỳ lương.",
+      "avg_score": 0.0,
+      "worst_metric": "faithfulness",
+      "score": 0.0,
+      "diagnosis": "LLM tự bịa câu trả lời ngoài tài liệu (LLM hallucinating)",
+      "suggested_fix": "Thắt chặt system prompt, giảm nhiệt độ (temperature) về 0 (Tighten prompt, lower temperature)"
+    },
+    {
+      "question": "Nhân viên được nghỉ bao nhiêu ngày phép năm?",
+      "answer": "Trích từ nghi_phep_nam_v2023.md. \n\n## Số ngày phép năm\nMỗi nhân viên chính thức được hưởng **12 ngày phép năm** có lương. Số ngày phép được tính theo năm dương lịch từ 01/01 đến 31/12. Nhân viên vào công ty giữa năm sẽ được tính pro-rata theo số tháng làm việc thực tế.",
+      "ground_truth": "Theo chính sách hiện hành (v2024), nhân viên được nghỉ 15 ngày phép năm có lương. Chính sách cũ (v2023) là 12 ngày nhưng đã bị thay thế.",
+      "avg_score": 0.0,
+      "worst_metric": "faithfulness",
+      "score": 0.0,
+      "diagnosis": "LLM tự bịa câu trả lời ngoài tài liệu (LLM hallucinating)",
+      "suggested_fix": "Thắt chặt system prompt, giảm nhiệt độ (temperature) về 0 (Tighten prompt, lower temperature)"
+    },
+    {
+      "question": "Thâm niên bao nhiêu năm thì được cộng thêm ngày phép?",
+      "answer": "Trích từ nghi_phep_nam_v2023.md. \n\n## Thâm niên công tác\nNhân viên có thâm niên từ **5 năm trở lên** được cộng thêm **1 ngày phép** cho mỗi 5 năm làm việc liên tục. Ví dụ: nhân viên 10 năm thâm niên được 14 ngày phép.",
+      "ground_truth": "Theo chính sách v2024 hiện hành, nhân viên có thâm niên từ 3 năm trở lên được cộng thêm 1 ngày phép cho mỗi 3 năm. Chính sách cũ v2023 yêu cầu 5 năm.",
+      "avg_score": 0.0,
+      "worst_metric": "faithfulness",
+      "score": 0.0,
+      "diagnosis": "LLM tự bịa câu trả lời ngoài tài liệu (LLM hallucinating)",
+      "suggested_fix": "Thắt chặt system prompt, giảm nhiệt độ (temperature) về 0 (Tighten prompt, lower temperature)"
+    },
+    {
+      "question": "Mật khẩu phải có tối thiểu bao nhiêu ký tự?",
+      "answer": "Trích từ mat_khau_v2.md. \n\n## Yêu cầu mật khẩu\nMật khẩu phải có tối thiểu **12 ký tự**, bao gồm ít nhất 1 chữ hoa, 1 chữ thường, 1 số và 1 ký tự đặc biệt (!@#$%^&*). Khuyến khích sử dụng passphrase dài hơn 16 ký tự.",
+      "ground_truth": "Theo chính sách hiện hành (v2.0), mật khẩu phải có tối thiểu 12 ký tự. Chính sách cũ (v1.0) yêu cầu 8 ký tự nhưng đã bị thay thế.",
+      "avg_score": 0.0,
+      "worst_metric": "faithfulness",
+      "score": 0.0,
+      "diagnosis": "LLM tự bịa câu trả lời ngoài tài liệu (LLM hallucinating)",
+      "suggested_fix": "Thắt chặt system prompt, giảm nhiệt độ (temperature) về 0 (Tighten prompt, lower temperature)"
+    },
+    {
+      "question": "Bao lâu phải đổi mật khẩu một lần?",
+      "answer": "Trích từ mat_khau_v1.md. \n\n## Chu kỳ thay đổi\nMật khẩu phải được thay đổi **mỗi 90 ngày**. Hệ thống sẽ tự động nhắc nhở trước 7 ngày. Mật khẩu mới không được trùng với 3 mật khẩu gần nhất.",
+      "ground_truth": "Theo chính sách hiện hành (v2.0), mật khẩu phải được thay đổi mỗi 120 ngày. Chính sách cũ yêu cầu 90 ngày nhưng đã bị thay thế.",
+      "avg_score": 0.0,
+      "worst_metric": "faithfulness",
+      "score": 0.0,
+      "diagnosis": "LLM tự bịa câu trả lời ngoài tài liệu (LLM hallucinating)",
+      "suggested_fix": "Thắt chặt system prompt, giảm nhiệt độ (temperature) về 0 (Tighten prompt, lower temperature)"
+    },
+    {
+      "question": "Có cần kích hoạt xác thực đa yếu tố (MFA) không?",
+      "answer": "Trích từ mat_khau_v2.md. \n\n## Xác thực đa yếu tố (MFA)\nTất cả nhân viên **bắt buộc** kích hoạt MFA cho tài khoản email, VPN và các hệ thống nội bộ. Phương thức MFA được chấp nhận: ứng dụng Authenticator (ưu tiên), SMS OTP, hoặc YubiKey.",
+      "ground_truth": "Có, theo chính sách mật khẩu v2.0 hiện hành, tất cả nhân viên bắt buộc kích hoạt MFA cho email, VPN và hệ thống nội bộ. Chính sách cũ v1.0 không yêu cầu MFA.",
+      "avg_score": 0.0,
+      "worst_metric": "faithfulness",
+      "score": 0.0,
+      "diagnosis": "LLM tự bịa câu trả lời ngoài tài liệu (LLM hallucinating)",
+      "suggested_fix": "Thắt chặt system prompt, giảm nhiệt độ (temperature) về 0 (Tighten prompt, lower temperature)"
+    },
+    {
+      "question": "Nhân viên thử việc có được nghỉ phép năm không?",
+      "answer": "Trích từ thu_viec.md. \n\n## Quyền lợi trong thử việc Nhân viên thử việc **KHÔNG được nghỉ phép năm**. Trường hợp cần nghỉ việc riêng, nhân viên thử việc phải xin nghỉ không lương và được trưởng phòng phê duyệt.",
+      "ground_truth": "KHÔNG. Nhân viên thử việc KHÔNG được nghỉ phép năm. Nếu cần nghỉ, phải xin nghỉ không lương và được trưởng phòng phê duyệt.",
+      "avg_score": 0.0,
+      "worst_metric": "faithfulness",
+      "score": 0.0,
+      "diagnosis": "LLM tự bịa câu trả lời ngoài tài liệu (LLM hallucinating)",
+      "suggested_fix": "Thắt chặt system prompt, giảm nhiệt độ (temperature) về 0 (Tighten prompt, lower temperature)"
+    },
+    {
+      "question": "Khi phát hiện malware trên máy, nhân viên có nên tự xử lý không?",
+      "answer": "Trích từ bao_mat_su_co.md. \n\nTuyệt đối **không tự ý xử lý malware** hoặc tìm cách khắc phục mà không có sự hướng dẫn của đội CNTT.",
+      "ground_truth": "KHÔNG. Nhân viên tuyệt đối không được tự ý xử lý malware. Phải báo cáo trong vòng 1 giờ qua helpdesk@cty.vn hoặc hotline CNTT. Tự ý xử lý bị coi là vi phạm nghiêm trọng.",
+      "avg_score": 0.0,
+      "worst_metric": "faithfulness",
+      "score": 0.0,
+      "diagnosis": "LLM tự bịa câu trả lời ngoài tài liệu (LLM hallucinating)",
+      "suggested_fix": "Thắt chặt system prompt, giảm nhiệt độ (temperature) về 0 (Tighten prompt, lower temperature)"
+    }
+  ]
+}
